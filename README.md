@@ -45,7 +45,3 @@ The demo company lives at [leadly-hq/leadly](https://github.com/leadly-hq/leadly
 3. Attach the skill: `hermes cron edit <job id> --name "Docwatch" --skill docwatch`
 4. Put `hooks/post-commit` in your repo's `.git/hooks/`, replace the job id, and run `chmod +x` on it.
 5. Optional: set `cron.wrap_response: false` in `~/.hermes/config.yaml` for clean messages.
-
-## What I learned
-
-I started by building Skillsnap, an agent that learns from tutorials, and found that Hermes already covers most of that with `/learn`. A good agent can often skip the tutorial entirely. Docwatch came from a real problem at my internship: the knowledge that matters is private, and it goes out of date faster than anything public.
