@@ -1,0 +1,6 @@
+#!/bin/sh
+# Simulates CI: push the commit, then ask Hermes to run docwatch. Logs to ~/docwatch-hook.log
+(
+  echo "=== $(date) commit $(git rev-parse --short HEAD) ==="
+  git push -q origin main && $HOME/.local/bin/hermes cron run a3de955c0ad3
+) >> $HOME/docwatch-hook.log 2>&1 &
