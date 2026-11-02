@@ -38,7 +38,6 @@ The demo company lives at [leadly-hq/leadly](https://github.com/leadly-hq/leadly
 `hooks/post-commit` is the git hook that triggers a run after each commit.
 
 ## Setup
-
 1. Copy `skill/SKILL.md` to `~/.hermes/skills/devops/docwatch/SKILL.md`.
 2. Create the job:
    `hermes cron create "every monday 10am" "Run the docwatch skill on <repo path>. If every doc is still valid, reply with exactly [SILENT] and nothing else. If any doc drifted, send the full drift report." --deliver telegram:<chat id>`
